@@ -128,9 +128,12 @@ var css3 =`以上，感谢观看。`
 writeLeftCode('',css1,()=>{
 	createPaper(()=>{
 		writeMarkDown(markDown, ()=>{
+			console.log('1')
 			writeLeftCode(css1,css2,()=>{
+				console.log('2')
 				convertMarkdownToHTML(()=>{
-					writeLeftCode(css1+css2,css3,()=>{
+					console.log('3')
+					writeLeftCode(css1 + css2,css3,()=>{
 						alert('Completed')
 					})
 				})
@@ -146,14 +149,14 @@ function writeLeftCode(prefix, css, fn){
 	var n = 0
 	var id = setInterval( ()=>{
 	  n += 1
-	  domCode.innerHTML = prefix + Prism.highlight(css.slice(0,n), Prism.languages.css, 'css')
+	  domCode.innerHTML =  Prism.highlight(prefix + css.slice(0,n), Prism.languages.css, 'css')
 	  styleCode.innerHTML = prefix + css.slice(0,n)
 	  domCode.scrollTop = domCode.scrollHeight
 	  if(n >= css.length){
 	  	window.clearInterval(id)
-	  	fn()
+	  	fn.call()
 	  }
-	},10)
+	},20)
 }
 
 function createPaper(fn){
