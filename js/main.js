@@ -71,12 +71,14 @@ var css1 =`
 #leftCode{
 	width: 49%;
 	height: 95vh;
-	background: rgba(0,0,0,0.1);
+	background: white;
 
 	position: fixed;
 	left: 0;
 	margin: 7px 0 0 9px;
 	overflow: hidden;
+
+	border-radius: 2px;
 }
 
 /* 把代码放中间呗 */
@@ -107,7 +109,8 @@ var css1 =`
 	padding-left: 35px;
 
 	overflow: auto;
-	background: pink;
+	background: #2e2e2e;
+	border-radius: 2px;
 	
 	//background: no-repeat url('https://w.wallhaven.cc/full/nk/wallhaven-nk91o7.jpg');
 }
