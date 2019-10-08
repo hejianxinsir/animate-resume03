@@ -107,8 +107,8 @@ var css1 =`
 	padding-left: 35px;
 
 	overflow: auto;
-	background: brown;
-	// background: no-repeat url('https://w.wallhaven.cc/full/nk/wallhaven-nk91o7.jpg');
+	background: black;
+	//background: no-repeat url('https://w.wallhaven.cc/full/nk/wallhaven-nk91o7.jpg');
 }
 .content{
 	font-size: 14px;
